@@ -1,0 +1,16 @@
+# IMDb raw snapshots are downloaded separately and are not redistributed.
+data/raw/imdb/*.tsv.gz
+data/processed/imdb/*.tsv.gz
+data/processed/imdb/manifest.json
+
+# Python preparation artifacts.
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local database and secrets.
+.env
+*.log
+
+# PostgreSQL local exports.
+docs/results/*.csv

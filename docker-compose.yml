@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: movie_analytics
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    shm_size: "1gb"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d movie_analytics"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql:/sql:ro
+      - ./data:/data:ro
+      - ./docs/results:/results
+
+volumes:
+  postgres_data:
