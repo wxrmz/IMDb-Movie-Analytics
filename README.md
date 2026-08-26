@@ -1,6 +1,6 @@
-# IMDb Movie Analytics with PostgreSQL
+# IMDb Movie Analytics
 
-Portfolio SQL project based on the official
+PostgreSQL project based on the official
 [IMDb Non-Commercial Datasets](https://developer.imdb.com/non-commercial-datasets/).
 
 The project builds a normalized PostgreSQL database and analyzes movie ratings,
